@@ -3,7 +3,7 @@
 For run direcly with docker:
 
 ```console
-docker run -d -p 5010:5010 -v ./${PATH_PROFIT_TRAILER}:/mnt/profittrailer -v ./ptdefender:/headless/.config/PTDefender --name ptdefender ptdefender
+docker run -d -p 5010:5010 -v ./${PATH_PROFIT_TRAILER}:/mnt/profittrailer -v ./ptfeeder01:/app/ptf --name ptfeeder01 but4ler/docker-ptfeeder
 ```
 
 # Docker-compose
@@ -23,14 +23,14 @@ services:
       - "8081:8081/tcp"
     network_mode: host
 
-  ptf01:
+  ptfeeder01:
     image: but4ler/docker-ptfeeder:latest
     restart: always
     ports:
       - "5010:5010"
     volumes:
       - ./pt01:/mnt/profittrailer
-      - ./ptfeeder:/app/ptf     
+      - ./ptfeeder01:/app/ptf     
     network_mode: host
 
     network_mode: host
