@@ -1,12 +1,15 @@
 # docker-ptfeeder
 
+For run direcly with docker:
+
 ```console
 docker run -d -p 5010:5010 -v ./${PATH_PROFIT_TRAILER}:/mnt/profittrailer -v ./ptdefender:/headless/.config/PTDefender --name ptdefender ptdefender
 ```
 
-
 # Docker-compose
-File docker-compose.yml
+for run with docker-compose (best methode)
+
+vi docker-compose.yml
 
 ```yml
 version: '3'
