@@ -33,8 +33,6 @@ services:
       - ./ptfeeder01:/app/ptf     
     network_mode: host
 
-    network_mode: host
-
 ```
 
 ```console
